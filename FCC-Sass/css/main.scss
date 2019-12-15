@@ -1,0 +1,107 @@
+// 01 Store Data with Sass Variables
+$text-color: red;
+
+.header {
+  text-align: center;
+}
+.blog-post,
+h2 {
+  color: $text-color;
+}
+
+// 02 Nest CSS with Sass
+.blog-post1 {
+  h1 {
+    text-align: center;
+    color: blue;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+//03 Sass: Create Reusable CSS with Mixins
+@mixin my-border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+#awesome {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+  @include my-border-radius(15px);
+}
+
+//04 Use @if and @else to Add Logic To Your Styles
+@mixin border-stroke($val) {
+  @if $val==light {
+    border: 1px solid black;
+  } @else if $val == medium {
+    border: 3px solid black;
+  } @else if $val == heavy {
+    border: 6px solid black;
+  } @else {
+    border: none;
+  }
+}
+#box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  @include my-border-radius(20px);
+  @include border-stroke(heavy);
+}
+
+//05 Sass: Use @for to Create a Sass Loop
+@for $i from 1 through 5 {
+  .text-#{$i} {
+    font-size: 10px * $i;
+  }
+}
+
+//06 Sass: Use @each to Map Over Items in a List
+$colors: (blue, black, red);
+@each $val in $colors {
+  .#{$val}-bg {
+    background-color: $val;
+  }
+}
+
+@each $color in pink, green, white {
+  .#{$color}-bg {
+    background-color: $color;
+  }
+}
+
+// 07 Apply a Style Until a Condition is Met with @while
+$x: 1;
+@while $x<6 {
+  .txt-#{$x} {
+    font-size: 10px * $x;
+  }
+  $x: $x + 1;
+}
+
+//08 Sass: Split Your Styles into Smaller Chunks with Partials
+@import "mixins";
+
+// p {
+//   background-color: $my-color;
+// }
+
+//09 Extend One Set of CSS Styles to Another ElementPassed
+h3 {
+  text-align: center;
+}
+.info {
+  width: 200px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.info-important {
+  @extend .info;
+  background-color: magenta;
+}

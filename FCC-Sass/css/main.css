@@ -1,0 +1,111 @@
+.header {
+  text-align: center;
+}
+
+.blog-post,
+h2 {
+  color: red;
+}
+
+.blog-post1 h1 {
+  text-align: center;
+  color: blue;
+}
+
+.blog-post1 p {
+  font-size: 20px;
+}
+
+#awesome {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+  border-radius: 15px;
+}
+
+#box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  border-radius: 20px;
+  border: 6px solid black;
+}
+
+.text-1 {
+  font-size: 10px;
+}
+
+.text-2 {
+  font-size: 20px;
+}
+
+.text-3 {
+  font-size: 30px;
+}
+
+.text-4 {
+  font-size: 40px;
+}
+
+.text-5 {
+  font-size: 50px;
+}
+
+.blue-bg {
+  background-color: blue;
+}
+
+.black-bg {
+  background-color: black;
+}
+
+.red-bg {
+  background-color: red;
+}
+
+.pink-bg {
+  background-color: pink;
+}
+
+.green-bg {
+  background-color: green;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.txt-1 {
+  font-size: 10px;
+}
+
+.txt-2 {
+  font-size: 20px;
+}
+
+.txt-3 {
+  font-size: 30px;
+}
+
+.txt-4 {
+  font-size: 40px;
+}
+
+.txt-5 {
+  font-size: 50px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.info, .info-important {
+  width: 200px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.info-important {
+  background-color: magenta;
+}
+/*# sourceMappingURL=main.css.map */

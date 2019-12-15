@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Functional Programming Challenges</title>
+  <style>
+    ul {
+      margin: 1em 0;
+    }
+
+    li {
+      /* margin: 1em 0; */
+      line-height: 1.7em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Introduction to the Functional Programming Challenges</h1>
+  <p>
+    Functional programming is an approach to software development based around
+    the evaluation of functions. Like mathematics, functions in programming
+    map input to output to produce a result. You can combine basic functions
+    in many ways to build more and more complex programs.
+  </p>
+  <p>Functional programming follows a few core principles:</p>
+  <ul>
+    <li>
+      Functions are independent from the state of the program or global
+      variables. They only depend on the arguments passed into them to make a
+      calculation
+    </li>
+    <li>
+      Functions try to limit any changes to the state of the program and avoid
+      changes to the global objects holding data
+    </li>
+    <li>Functions have minimal side effects in the program</li>
+  </ul>
+  <p>
+    The functional programming software development approach breaks a program
+    into small, testable parts. This section covers basic functional
+    programming principles in JavaScript.
+  </p>
+
+  <ol>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/learn-about-functional-programming"
+      target="_blank">
+      <li>Learn About Functional Programming</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/understand-functional-programming-terminology"
+      target="_blank">
+      <li>Understand Functional Programming Terminology</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/understand-the-hazards-of-using-imperative-code"
+      target="_blank">
+      <li>Understand the Hazards of Using Imperative Code</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/avoid-mutations-and-side-effects-using-functional-programming"
+      target="_blank">
+      <li>
+        Avoid Mutations and Side Effects Using Functional Programming
+      </li>
+    </a>
+    <ul>
+      <li style="color: red; font-weight: bold; ">
+        One of the core principles of functional programming is to not change
+        things. <br />
+        ---Changes lead to bugs.
+      </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/pass-arguments-to-avoid-external-dependence-in-a-function"
+      target="_blank">
+      <li>Pass Arguments to Avoid External Dependence in a Function</li>
+    </a>
+    <ul>
+      <li style="color:red;">
+        Another principle of functional programming is to always declare your
+        dependencies explicitly. <br />This means if a function depends on a
+        variable or object being present, then pass that variable or object
+        directly into the function as an argument.
+      </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/refactor-global-variables-out-of-functions"
+      target="_blank">
+      <li>Refactor Global Variables Out of Functions</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array"
+      target="_blank">
+      <li>Use the map Method to Extract Data from an Array</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/implement-map-on-a-prototype"
+      target="_blank">
+      <li>Implement map on a Prototype</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-filter-method-to-extract-data-from-an-array"
+      target="_blank">
+      <li>Use the filter Method to Extract Data from an Array</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/implement-the-filter-method-on-a-prototype"
+      target="_blank">
+      <li>Implement the filter Method on a Prototype</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/return-part-of-an-array-using-the-slice-method"
+      target="_blank">
+      <li>Return Part of an Array Using the slice Method</li>
+    </a>
+    <ul>
+      <li>
+        The slice method returns a copy of certain elements of an array. It can take two arguments, the first gives the
+        index of where to begin the slice, the second is the index for where to end the slice <b>(and it's
+          non-inclusive).</b>
+      </li>
+      <li>
+        If the arguments are not provided, the default is to start at the beginning of the array through the end, which
+        is <b>an easy way to make a copy of the entire array.</b>
+      </li>
+      <li>The slice method <b>does not mutate</b> the original array, but returns a new one.</li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/remove-elements-from-an-array-using-slice-instead-of-splice"
+      target="_blank">
+      <li>Remove Elements from an Array Using slice Instead of splice</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/combine-two-arrays-using-the-concat-method"
+      target="_blank">
+      <li>Combine Two Arrays Using the concat Method</li>
+    </a>
+    <ul>
+      <li><i>Concatenation</i> means to join items end to end. JavaScript offers the concat method for both strings
+        and arrays that work in the same way. For arrays, the method is called on one, then another array is provided
+        as the argument to concat, which is added to the end of the first array. It returns a new array and <b
+          style="color:red;"> does
+          not
+          mutate</b> either of the original arrays.</li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/add-elements-to-the-end-of-an-array-using-concat-instead-of-push"
+      target="_blank">
+      <li>
+        Add Elements to the End of an Array Using concat Instead of push
+      </li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-reduce-method-to-analyze-data"
+      target="_blank">
+      <li>Use the reduce Method to Analyze Data</li>
+    </a>
+    <ul>
+      <li>If you want to <b>compare elements</b> of the array, or <b>add</b> them together, filter or map could not
+        process that.</li>
+      <li>The reduce method allows for more general forms of array processing, and it's possible to show that both
+        filter and map can be derived as a special application of reduce.</li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-higher-order-functions-map-filter-or-reduce-to-solve-a-complex-problem"
+      target="_blank">
+      <li>
+        Use Higher-Order Functions map, filter, or reduce to Solve a Complex
+        Problem
+      </li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/sort-an-array-alphabetically-using-the-sort-method"
+      target="_blank">
+      <li>Sort an Array Alphabetically using the sort Method</li>
+    </a>
+    <ul>
+      <li>JavaScript's default sorting method is by string Unicode point value, which may return unexpected results.
+      </li>
+      <li>
+        Therefore, it is encouraged to provide a callback function to specify how to sort the array items. When such a
+        callback function, normally called compareFunction, is supplied, the array elements are sorted according to the
+        return value of the compareFunction:
+        <ul>
+          <li>If compareFunction(a,b) returns a value less than 0 for two elements a
+            and b, then a will come before b.</li>
+          <li>If compareFunction(a,b) returns a value greater than 0 for two elements a
+            and b, then b will come before a.</li>
+          <li>If compareFunction(a,b) returns a value equal to 0 for two elements a and
+            b, then a and b will remain unchanged.</li>
+        </ul>
+
+      </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/return-a-sorted-array-without-changing-the-original-array"
+      target="_blank">
+      <li>Return a Sorted Array Without Changing the Original Array</li>
+    </a>
+    <a
+      href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/split-a-string-into-an-array-using-the-split-method">
+      <li>Split a String into an Array Using the split Method</li>
+    </a>
+    <ul>
+      <li>The split method splits a string into an array of strings. It takes an argument for the delimiter, which can
+        be a character to use to break up the string or a regular expression. </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/combine-an-array-into-a-string-using-the-join-method"
+      target="_blank">
+      <li>Combine an Array into a String Using the join Method</li>
+    </a>
+    <ul>
+      <li>The join method is used to join the elements of an array together to create a string. It takes an argument for
+        the delimiter that is used to separate the array elements in the string.</li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/apply-functional-programming-to-convert-strings-to-url-slugs"
+      target="_blank">
+      <li>
+        Apply Functional Programming to Convert Strings to URL Slugs
+      </li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-every-method-to-check-that-every-element-in-an-array-meets-a-criteria"
+      target="_blank">
+      <li>
+        Use the every Method to Check that Every Element in an Array Meets a
+        Criteria
+      </li>
+    </a>
+    <ul>
+      <li>
+        The every method works with arrays to check if every element passes a particular test. It returns a Boolean
+        value - true if all values meet the criteria, false if not.
+      </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-some-method-to-check-that-any-elements-in-an-array-meet-a-criteria"
+      target="_blank">
+      <li>
+        Use the some Method to Check that Any Elements in an Array Meet a
+        Criteria
+      </li>
+    </a>
+    <ul>
+      <li>The some method works with arrays to check if any element passes a particular test. It returns a Boolean value
+        - true if any of the values meet the criteria, false if not.</li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/introduction-to-currying-and-partial-application"
+      target="_blank">
+      <li>Introduction to Currying and Partial Application</li>
+    </a>
+    <ul>
+      <li>The arity of a function is the number of arguments it requires. Currying a function means to convert a
+        function of N arity into N functions of arity 1.
+
+        In other words, it restructures a function so it takes one argument, then returns another function that takes
+        the next argument, and so on.
+
+        Here's an example:</li>
+      <pre style="display:block; padding:10px;background:#999999;">
+      //Un-curried function
+        function unCurried(x, y) {
+        return x + y;
+        }
+
+        //Curried function
+        function curried(x) {
+        return function(y) {
+        return x + y;
+        }}
+
+      //Alternative using ES6
+        const curried = x => y => x + y
+
+        curried(1)(2) // Returns 3
+      </pre>
+    </ul>
+  </ol>
+  <!-- <script src="01.js"></script> -->
+  <script src="02.js"></script>
+  <script src="03.js"></script>
+  <script src="0405.js"></script>
+  <script src="06.js"></script>
+  <script src="07.js"></script>
+  <script src="08.js"></script>
+  <script src="09.js"></script>
+  <script src="10.js"></script>
+  <script src="11.js"></script>
+  <script src="121314.js"></script>
+  <script src="15.js"></script>
+  <script src="16.js"></script>
+  <script src="1718.js"></script>
+  <script src="1920.js"></script>
+  <script src="21.js"></script>
+  <script src="22.js"></script>
+  <script src="23.js"></script>
+  <script src="24.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+
+
+
+shouldchange    deno            cid
+76.6            100             100
+                20              60
+                10              30
+                5               15
+                1               30
+                o.25            1.25
+                0.1             1.1
+                0.05            3
+                0.01            4
+
+当76大于等于100   X
+
+当76大于等于20   yes
+    shouldchange = 76.6 - 20;
+    cid = 60- 20
+    change = 二十： 20
+
+当56大于等于20   yes
+    shouldchange = 56.6 - 20;
+    cid = 40- 20
+    change = 二十： 20  + 20
+
+当36大于等于20   yes
+    shouldchange = 36.6 - 20;
+    cid = 20- 20
+    change = 二十： 20  + 20 + 20

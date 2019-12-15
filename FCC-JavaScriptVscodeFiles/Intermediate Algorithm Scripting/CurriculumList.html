@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    Introduction to the Intermediate Algorithm Scripting Challenges
+  </title>
+  <style>
+    pre {
+      background: #eee;
+      padding: 10px;
+      border: 1px solid #999999;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Introduction to the Intermediate Algorithm Scripting Challenges</h1>
+  <p>
+    The following challenges are part of FCC's Intermediate Algorithm
+    Scripting Challenges. These should prepare you to complete the final
+    challenges for the JavaScript Algorithms And Data Structures
+    Certification.
+  </p>
+  <p>
+    These challenges will allow you to test how much you have learned and
+    which parts you may need to review again before starting the projects.
+  </p>
+  <ol>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/sum-all-numbers-in-a-range"
+      target="_blank">
+      <li>Sum All Numbers in a Range</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/diff-two-arrays"
+      target="_blank">
+      <li>Diff Two Arrays</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/seek-and-destroy"
+      target="_blank">
+      <li>Seek and Destroy</li>
+    </a>
+    <ul>
+      <li>
+        <b>arguments object</b> --click
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments" target="_blank">
+          here</a>
+        to lean it.
+      </li>
+      <pre>
+  var args = Array.prototype.slice.call(arguments);
+  var args = [].slice.call(arguments);
+
+  // ES2015
+  const args = Array.from(arguments);
+  const args = [...arguments];
+        </pre>
+    </ul>
+    <a
+      href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/wherefore-art-thou">
+      <li>Wherefore art thou</li>
+    </a>
+    <ul>
+      <li>Object.keys(obj)</li>
+      <li>Object.values(obj)</li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/spinal-tap-case"
+      target="_blank">
+      <li>Spinal Tap Case</li>
+    </a>
+    <ul>
+      <li>Different Regular Expression</li>
+      <ul>
+        <li>
+          <pre>/\s+|_+/g</pre>
+        </li>
+        <li>
+          <pre>/(?:_| )+/</pre>
+        </li>
+      </ul>
+      <li>2 ways to make low-upper case to low-space-uppercase</li>
+      <ul>
+        <li>
+          <pre>str = str.replace(/([a-z])([A-Z])/g, "$1 $2");</pre>
+        </li>
+        <li>
+          <pre>str.split(/\s|_|(?=[A-Z])/)</pre>
+        </li>
+      </ul>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/pig-latin"
+      target="_blank">
+      <li>Pig Latin</li>
+    </a>
+    <ul>
+      <li>** substr()|subString()** is used for string manipulation</li>
+      <li>Regular Expression</li>
+      <ul>
+        <li>
+          <pre>/regE/.test(str)</pre>
+        </li>
+        <li>
+          <pre>str.match(/regE/)</pre>
+        </li>
+      </ul>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/search-and-replace"
+      target="_blank">
+      <li>Search and Replace</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/dna-pairing"
+      target="_blank">
+      <li>DNA Pairing</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/missing-letters"
+      target="_blank">
+      <li>Missing letters</li>
+    </a>
+    <ul>
+      <li>
+        <b>string.charCodeAt(index)</b>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>String.fromCharCode()</b>
+      </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/sorted-union"
+      target="_blank">
+      <li>Sorted Union</li>
+    </a>
+    <ul>
+      <li>handel arguments</li>
+      <ul>
+        <li>
+          <pre>
+for (var i = 0; i < arguments.length; i++) {
+  var arrayArguments = arguments[i];
+            </pre>
+        </li>
+        <li>
+          <pre>
+var args = [...arguments]
+          </pre>
+        </li>
+        <li>
+          <pre>
+var args = Array.prototype.slice.call(arguments);
+            </pre>
+        </li>
+        <li>
+          <pre>
+var i = 0;
+while (arguments[i]) {
+  concatArr = concatArr.concat(arguments[i]);
+  i++;
+}              
+            </pre>
+        </li>
+        <li>
+          <pre>
+const flatArray = [].concat(...arrays);
+            </pre>
+        </li>
+      </ul>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/convert-html-entities"
+      target="_blank">
+      <li>Convert HTML Entities</li>
+    </a>
+    <p>
+      Because we can't replace a character in a string by
+      <code>str[n]="str"</code>, so if we want use this way, we should split
+      it into array. <code>strlst = str.split['']</code>
+    </p>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/sum-all-odd-fibonacci-numbers"
+      target="_blank">
+      <li>Sum All Odd Fibonacci Numbers</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/sum-all-primes"
+      target="_blank">
+      <li>Sum All Primes</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/smallest-common-multiple"
+      target="_blank">
+      <li>
+        Smallest Common Multiple....
+        <p style="color:purple">Failed</p>
+      </li>
+    </a>
+    <ul>
+      <li>
+        <ul>
+          Euclidean algorithm for the greatest common divisor.
+          <li>
+            <p>
+              The GCD of three or more numbers equals the product of the prime
+              factors common to all the numbers,[11] but it can also be
+              calculated by repeatedly taking the GCDs of pairs of
+              numbers.[12] For example, <br />
+              gcd(a, b, c) = gcd(a, gcd(b, c)) = gcd(gcd(a, b), c) =
+              gcd(gcd(a, c), b).
+            </p>
+            <pre>
+const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+              </pre>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/drop-it"
+      target="_blank">
+      <li>Drop it</li>
+    </a>
+    <ul>
+      <li>
+        <pre>
+findIndex()  //Use ES6 findIndex() function to find the index of the element</pre>
+      </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/steamroller"
+      target="_blank">
+      <li>Steamroller</li>
+    </a>
+    <ul>
+      <li>
+        <pre>
+array.flat()
+        </pre>
+      </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/binary-agents"
+      target="_blank">
+      <li>Binary Agents</li>
+    </a>
+    <a
+      href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/everything-be-true">
+      <li>Everything Be True</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/arguments-optional"
+      target="_blank">
+      <li>Arguments Optional --**Difficult</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/make-a-person"
+      target="_blank">
+      <li>Make a Person</li>
+    </a>
+    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/map-the-debris"
+      target="_blank">
+      <li>Map the Debris</li>
+    </a>
+  </ol>
+  <script src="./01.js"></script>
+  
+</body>
+
+</html>
