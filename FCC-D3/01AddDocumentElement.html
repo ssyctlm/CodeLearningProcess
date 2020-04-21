@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Add Document Elements with D3</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+  <h1> Add Document Elements with D3</h1>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+        select()
+        append()
+        text()
+
+        d3.select("ul")
+          .append("li")
+          .text("Very important item");
+      </pre>
+    </code>
+  </p>
+  <script>
+    d3.select('body').append('h2').text('Learning D3')
+  </script>
+</body>
+
+</html>

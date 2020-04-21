@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamically Set the Coordinates for Each Bar</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+    svg {
+      background-color: pink;
+    }
+
+    .bar {
+      background-color: indigo;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Dynamically Set the Coordinates for Each Bar</h1>
+  <p>
+
+  </p>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+        selection.attr("property", (d, i) => {
+          /* 
+          * d is the data point value
+          * i is the index of the data point in the array
+          */
+        })
+      </pre>
+    </code>
+  </p>
+  <p id="dataSet"></p>
+  <hr>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    const w = 500;
+    const h = 100;
+    d3.select('body')
+      .append('svg')
+      .style('width', w + 'px')
+      .style('height', h + 'px')
+      .selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('fill', 'red')
+      .attr('height', d => (100 - (d * 3)))
+      .attr('width', 25)
+      .attr('x', (d, i) => 30 * i)
+  </script>
+</body>
+
+</html>

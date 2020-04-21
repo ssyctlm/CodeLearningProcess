@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Shapes with SVG</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+    svg {
+      background-color: pink;
+    }
+
+    .scale {
+      width: 500px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Display Shapes with SVG</h1>
+  <p>
+    An SVG rect has four attributes. There are the x and y coordinates for where it is placed in the svg area. It also
+    has a height and width to specify the size. </p>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+      </pre>
+    </code>
+  </p>
+  <p id="dataSet"></p>
+  <hr>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    const w = 500;
+    const h = 100;
+    d3.select('body')
+      .append('svg')
+      .style('width', w + 'px')
+      .style('height', h + 'px')
+      .append('rect')
+      .attr('fill', 'red')
+      .attr("width", 25)
+      .attr('height', 100)
+      .attr('x', 50)
+      .attr('y', 30)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update the Height of an Element Dynamically</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+    .bar {
+      width: 25px;
+      height: 100px;
+      display: inline-block;
+      background-color: greenyellow;
+      margin-right: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Update the Height of an Element Dynamically</h1>
+  <p>The previous challenges covered how to display data from an array and how to add CSS classes. You can combine these
+    lessons to create a simple bar chart. There are two steps to this:
+    <br>
+    1) Create a div for each data point in the array
+    <br>
+    2) Give each div a dynamic height, using a callback function in the style() method that sets height equal to the
+    data value
+    <br>
+    Recall the format to set a style using a callback function:
+
+  </p>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+        selection.style("cssProperty", (d) => d)      </pre>
+    </code>
+  </p>
+  <p id="dataSet"></p>
+  <hr>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+    d3.select('body')
+      .selectAll('div')
+      .data(dataset)
+      .enter()
+      .append('div')
+      .attr('class', 'bar')
+      .style('height', d => d + 'px')
+  </script>
+</body>
+
+</html>

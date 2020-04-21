@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change the Presentation of a Bar Chart</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+    .bar {
+      width: 25px;
+      height: 100px;
+      display: inline-block;
+      background-color: greenyellow;
+      margin-right: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Change the Presentation of a Bar Chart</h1>
+  <p>
+    The last challenge created a bar chart, but there are a couple of formatting changes that could improve it:
+    <br>
+    1) Add space between each bar to visually separate them, which is done by adding a margin to the CSS for the bar
+    class
+    <br>
+    2) Increase the height of the bars to better show the difference in values, which is done by multiplying the value
+    by a number to scale the height
+  </p>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+
+      </pre>
+    </code>
+  </p>
+  <p id="dataSet"></p>
+  <hr>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+    d3.select('body')
+      .selectAll('div')
+      .data(dataset)
+      .enter()
+      .append('div')
+      .attr('class', 'bar')
+      .style('height', d => d * 10 + 'px')
+  </script>
+</body>
+
+</html>

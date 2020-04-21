@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Inline Styling to Elements</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+  <h1>Add Inline Styling to Elements</h1>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+        selection.style("color","blue")
+      </pre>
+    </code>
+  </p>
+  <p id="dataSet"></p>
+  <hr>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+    let concatText = ''
+    for (let i in dataset) {
+      concatText += ` ${dataset[i]}`;
+    }
+    document.getElementById('dataSet').innerHTML = concatText;
+    d3.select('body')
+      .append('ul')
+      .selectAll('li')
+      .data(dataset)
+      .enter()
+      .append('li')
+      .text(d => d)
+      .style('font-family', 'verdana')
+      .style('color', 'red')
+  </script>
+</body>
+
+</html>
