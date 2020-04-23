@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Linear Scale with D3</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+    svg {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Create a Linear Scale with D3</h1>
+  <p>
+    The bar and scatter plot charts both plotted data directly onto the SVG canvas. However, if the height of a bar or
+    one of the data points were larger than the SVG height or width values, it would go outside the SVG area.
+
+    In D3, there are scales to help plot data. Scales are functions that tell the program how to map a set of raw data
+    points onto the pixels of the SVG canvas.
+  </p>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+        const scale = d3.scaleLinear()
+            </pre>
+    </code>
+  </p>
+  <p id="dataSet"></p>
+  <hr>
+  <script>
+    // Add your code below this line
+
+    const scale = d3.scaleLinear(); // Create the scale here
+    const output = scale(50); // Call the scale with an argument here
+
+    // Add your code above this line
+
+    d3.select("body")
+      .append("h2")
+      .text(output);
+  </script>
+</body>
+
+</html>

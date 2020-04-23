@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set a Domain and a Range on a Scale</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>Set a Domain and a Range on a Scale</h1>
+  <p>
+    Say a data set has values ranging from 50 to 480. This is the input information for a scale, and is also known as
+    the domain.
+
+    You want to map those points along the x axis on the SVG canvas, between 10 units and 500 units. This is the output
+    information, which is also known as the range.
+  </p>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+        scale.domain([50, 480]);
+        // Set a range
+        // The range covers the set of output values
+        scale.range([10, 500]);
+        scale(50) // Returns 10
+        scale(480) // Returns 500
+        scale(325) // Returns 323.37
+        scale(750) // Returns 807.67
+        d3.scaleLinear()
+            </pre>
+    </code>
+  </p>
+  <p id="dataSet"></p>
+  <hr>
+  <script>
+    // Add your code below this line
+
+    const scale = d3.scaleLinear(); // Create the scale here
+
+    //Domain and range
+    scale.domain([250, 500]).range([10, 150])
+
+
+    const output = scale(50); // Call the scale with an argument here
+
+    // Add your code above this line
+
+    d3.select("body")
+      .append("h2")
+      .text(output);
+  </script>
+</body>
+
+</html>
