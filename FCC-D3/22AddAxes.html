@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Axes to a Visualization</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>Add Axes to a Visualization</h1>
+  <p>
+    D3 has two methods axisLeft() and axisBottom() to render the y and x axes, respectively. (Axes is the plural form of
+    axis). Here's an example to create the x-axis based on the xScale in the previous challenges:
+  </p>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+        const xAxis = d3.axisBottom(xScale);
+
+        svg.append("g")
+          .attr("transform", "translate(0, " + (h - padding) + ")")
+          .call(xAxis);
+            </pre>
+    </code>
+  </p>
+  <p id="dataSet"></p>
+  <hr>
+  <script>
+    const dataset = [
+      [34, 78],
+      [109, 280],
+      [310, 120],
+      [79, 411],
+      [420, 220],
+      [233, 145],
+      [333, 96],
+      [222, 333],
+      [78, 320],
+      [21, 123]
+    ];
+
+    const w = 500;
+    const h = 500;
+
+    // Padding between the SVG canvas boundary and the plot
+    const padding = 60;
+
+    // Create an x and y scale
+
+    const xScale = d3.scaleLinear()
+      .domain([0, d3.max(dataset, (d) => d[0])])
+      .range([padding, w - padding]);
+
+    // Add your code below this line
+
+    const yScale = d3.scaleLinear()
+      .domain([0, d3.max(dataset, d => d[1])])
+      .range([h - padding, padding]);
+
+
+    //svg canvas
+    const svg = d3.select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h)
+
+    //scatter plot -circles
+    svg.selectAll('circle')
+      .data(dataset)
+      .enter()
+      .append('circle')
+      .attr('cx', d => xScale(d[0]))
+      .attr('cy', d => yScale(d[1]))
+      .attr('r', '5px')
+
+    //texts
+    svg.selectAll('text')
+      .data(dataset)
+      .enter()
+      .append('text')
+      .text(d => d)
+      .attr('x', d => xScale(d[0] + 10))
+      .attr('y', d => yScale(d[1]))
+
+
+    // add axes
+    const xAxis = d3.axisBottom(xScale)
+    const yAxis = d3.axisLeft(yScale)
+
+    // add x axis
+    svg.append('g')
+      .attr('transform', `translate(0,${h-padding})`)
+      .call(xAxis)
+
+    //add y axis
+    svg.append('g')
+      .attr('transform', `translate(${padding},0)`)
+      .call(yAxis)
+  </script>
+</body>
+
+</html>

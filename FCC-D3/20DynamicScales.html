@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use Dynamic Scales</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>Use Dynamic Scales</h1>
+  <p>
+
+  </p>
+  <p>
+    Code of this lesson:
+    <code>
+      <pre>
+        const dataset = [
+        [ 34,    78 ],
+        [ 109,   280 ],
+        [ 310,   120 ],
+        [ 79,    411 ],
+        [ 420,   220 ],
+        [ 233,   145 ],
+        [ 333,   96 ],
+        [ 222,   333 ],
+        [ 78,    320 ],
+        [ 21,    123 ]
+      ];
+      const w = 500;
+      const h = 500;
+
+      // Padding between the SVG canvas boundary and the plot
+      const padding = 30;
+      const xScale = d3.scaleLinear()
+        .domain([0, d3.max(dataset, (d) => d[0])])
+        .range([padding, w - padding]);
+            </pre>
+    </code>
+  </p>
+  <p id="dataSet"></p>
+  <hr>
+  <script>
+    const dataset = [
+      [34, 78],
+      [109, 280],
+      [310, 120],
+      [79, 411],
+      [420, 220],
+      [233, 145],
+      [333, 96],
+      [222, 333],
+      [78, 320],
+      [21, 123]
+    ];
+
+    const w = 500;
+    const h = 500;
+
+    // Padding between the SVG canvas boundary and the plot
+    const padding = 30;
+
+    // Create an x and y scale
+
+    const xScale = d3.scaleLinear()
+      .domain([0, d3.max(dataset, (d) => d[0])])
+      .range([padding, w - padding]);
+
+    // Add your code below this line
+
+    const yScale = d3.scaleLinear()
+      .domain([0, d3.max(dataset, d => d[1])])
+      .range([h - padding, padding]);
+
+
+    // Add your code above this line
+
+    const output = yScale(411); // Returns 30
+    d3.select("body")
+      .append("h2")
+      .text(output)
+  </script>
+</body>
+
+</html>

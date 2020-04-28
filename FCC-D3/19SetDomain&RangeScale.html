@@ -34,11 +34,27 @@
         scale(750) // Returns 807.67
         d3.scaleLinear()
             </pre>
+      <pre>
+        d3.min()
+        d3.max()
+        
+        const locationData = [[1, 7],[6, 3],[8, 3]];
+        // Returns the smallest number out of the first elements
+        const minX = d3.min(locationData, (d) => d[0]);
+        // minX compared 1, 6, and 8 and is set to 1
+
+
+            </pre>
     </code>
   </p>
   <p id="dataSet"></p>
   <hr>
   <script>
+    const positionData = [
+      [1, 7, -4],
+      [6, 3, 8],
+      [2, 9, 3]
+    ]
     // Add your code below this line
 
     const scale = d3.scaleLinear(); // Create the scale here
@@ -54,6 +70,14 @@
     d3.select("body")
       .append("h2")
       .text(output);
+
+
+    // mix and max method
+    const outputMax = d3.max(positionData, d => d[2])
+
+    d3.select('body')
+      .append('h3')
+      .text(`outputMax:${outputMax}`)
   </script>
 </body>
 
